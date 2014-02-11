@@ -1,0 +1,16 @@
+%ol.breadcrumb
+  %li=link_to "Home", "javascript:void(0);"
+  %li=link_to "Usuários", "javascript:void(0);"
+
+.row
+  .col-xs-9
+    %h1 Novo Usuário
+
+- if flash[:error]
+  .alert.alert-danger
+    %b Ops!
+    Está faltando alguma coisa
+
+= render :partial => "form"
+
+

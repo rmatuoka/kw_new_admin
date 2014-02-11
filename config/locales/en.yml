@@ -1,0 +1,18 @@
+en:
+  site_name: "Administrator"
+  
+  send: "Send"
+  copywrite: "Administrator (C) 2014 - All rights reserved."
+  
+  msg_validate:
+    name_required: "Name must be filled"
+    name_minlength: "Please enter a valid name"
+    email_required: "Email must be filled"
+    email_email: "Enter a valid E-mail"    
+    phone_required: "Phone must be completed"
+    phone_minlength: "Enter a valid Phone"
+    message_required: "Message must be filled"
+    message_minlength: "Enter a message validates"
+    city_required: "City must be completed"
+    city_minlength: "Enter a city validates"
+    state_required: "Select a state"

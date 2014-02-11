@@ -1,0 +1,26 @@
+!!!
+%html
+  %head
+    %title Lythos CRM - 2013
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+
+    = csrf_meta_tags
+  %body
+    .header
+      .col-xs-2.logo
+        = link_to image_tag ("template/logo.jpg"), root_path
+        
+    .main-content
+      .col-xs-12.col-md-12.container-main
+        .row.main-box
+          .col-xs-12
+            = yield
+        
+        .row.footer
+          .col-xs-12
+            = link_to (image_tag("template/sato7.jpg"), "http://www.sato7.com.br", :target => "_blank")
+            
+            = link_to "Política de Privacidade", "#" , :class => "footer-links"
+            = link_to "Termos de Uso", "#", :class => "footer-links"
+            
+  = javascript_include_tag "application"

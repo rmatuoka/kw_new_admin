@@ -1,0 +1,26 @@
+!!!
+%html
+  %head
+    %title
+      = content_for?(:title) ? t("site_name") + " - " + yield(:title) : t("site_name")
+    %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
+    = stylesheet_link_tag "application"
+    = javascript_include_tag :defaults
+    = csrf_meta_tag
+    = yield(:head)
+
+  %body
+    #container
+      - flash.each do |name, msg|
+        = content_tag :div, msg, :id => "flash_#{name}"
+
+      - if show_title?
+        %h1= yield(:title)
+
+      = yield
+      = link_to (image_tag("template/sato7.jpg"), "http://www.sato7.com.br", :target => "_blank")
+
+      = link_to "Política de Privacidade", "#" , :class => "footer-links"
+      = link_to "Termos de Uso", "#", :class => "footer-links"
+
+  = javascript_include_tag "application"

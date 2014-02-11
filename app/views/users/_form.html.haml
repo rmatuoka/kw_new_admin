@@ -1,0 +1,17 @@
+.row
+  .col-sm-12.top-space  
+    = form_for @user do |f|
+      = f.error_messages
+      %p
+        = f.text_field :name, :class => "form-control", :placeholder => "#{t('activerecord.attributes.user.name')}"
+      %p
+        = f.text_field :email, :class => "form-control", :placeholder => "#{t('activerecord.attributes.user.email')}"
+      %p
+        = f.password_field :password, :class => "form-control", :placeholder => "#{t('activerecord.attributes.user.password')}"
+  
+      %p
+        = f.password_field :password_confirmation, :class => "form-control", :placeholder => "#{t('activerecord.attributes.user.password_confirmation')}"
+      <br/><br/> 
+      =f.submit nil, :class => "btn btn-default"
+  
+  //=link_to "Voltar", users_path(), :class => "btn btn-default"
